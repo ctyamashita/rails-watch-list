@@ -1,6 +1,6 @@
 <div class="container">
   <h1><%= @list.name %></h1>
-  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: 'btn btn-dark mb-3' %>
+  <%= link_to "🎬 Add a movie", new_list_bookmark_path(@list), class: 'btn btn-dark mb-3' %>
   <div class="cards">
     <% @list.movies.each do |movie| %>
       <div class="card-movie" style="background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url(<%= movie.poster_url %>)">
@@ -9,11 +9,11 @@
         </div>
         <div class="movie-description">
           <h3><%= movie.title %></h3>
-          <p><%= movie.overview %></p>
+          <p><%= movie.overview.slice(0..110) %>...</p>
         </div>
       </div>
     <% end %>
   </div>
   <br>
-  <%= link_to '< Back', lists_path, class: 'btn btn-dark mb-3' %>
+  <%= link_to '◀ Back', lists_path, class: 'btn btn-dark mb-3' %>
 </div>
