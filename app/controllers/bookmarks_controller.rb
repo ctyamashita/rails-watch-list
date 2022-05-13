@@ -12,6 +12,7 @@ class BookmarksController < ApplicationController
       redirect_to list_path(@bookmark.list)
     else
       render :new
+      # render list_path(@list)
     end
   end
 

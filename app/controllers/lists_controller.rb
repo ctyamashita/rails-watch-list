@@ -2,10 +2,12 @@ class ListsController < ApplicationController
   before_action :set_list, only: %i[show destroy]
 
   def index
+    @list = List.new
     @lists = List.all
   end
 
   def show
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -17,7 +19,9 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to lists_path
     else
-      render :new
+      @lists = List.all
+      render :index
+      # render :new
     end
   end
 

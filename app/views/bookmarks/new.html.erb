@@ -1,8 +1,12 @@
-<div class="container">
-  <h1>Add a movie to the list</h1>
-  <%= simple_form_for [@list, @bookmark] do |f| %>
-      <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
-      <%= f.input :comment %>
-      <%= f.submit %>
-  <% end %>
+<div class="d-flex justify-content-center">
+  <div class="col-12 col-sm-10 col-md-10 col-xl-8 col-xxl-6">
+    <div class="container card bg-light py-3">
+      <h3 class='my-4 text-center'><strong>Add a movie 🎬</strong></h3>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
+          <%= f.input :comment %>
+          <%= f.submit class: 'btn btn-dark mt-3 w-100' %>
+      <% end %>
+    </div>
+  </div>
 </div>
