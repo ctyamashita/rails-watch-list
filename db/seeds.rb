@@ -33,6 +33,4 @@ List.create(name: 'Suspense')
 List.create(name: 'Horror')
 List.create(name: 'Drama')
 
-
-
 puts "#{Movie.count} movies added to db."

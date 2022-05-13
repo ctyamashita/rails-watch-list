@@ -113,12 +113,18 @@
     position: absolute;
     top: 24px;
     right: 0;
-    background-color: rgb(227, 176, 10);
-    border-radius: 20px 0 0 20px;
   }
 
   h3 {
     padding: 0 16px;
     margin: 0;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    font-weight: lighter;
   }
 }

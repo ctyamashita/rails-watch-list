@@ -5,7 +5,7 @@
       <%= simple_form_for [@list, @bookmark] do |f| %>
           <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
           <%= f.input :comment %>
-          <%= f.submit class: 'btn btn-dark mt-3 w-100' %>
+          <%= f.submit class: 'btn btn-info mt-3 w-100' %>
       <% end %>
     </div>
   </div>
