@@ -1,6 +1,8 @@
-<h1>Add a movie to the list</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
-    <%= f.input :comment %>
-    <%= f.submit %>
-<% end %>
+<div class="container">
+  <h1>Add a movie to the list</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie, label_method: :title, value_method: :id, include_blank: false %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+  <% end %>
+</div>

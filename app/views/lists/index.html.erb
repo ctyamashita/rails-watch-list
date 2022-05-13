@@ -1,10 +1,12 @@
 <div class="container">
-  <h1>List of lists</h1>
+  <div class="title">
+    <h1>Movies' lists</h1>
+  </div>
   <%= link_to "📃 Add list", new_list_path, class: 'btn btn-dark mb-3' %>
 
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://source.unsplash.com/random/?#{list.name}" %>)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://source.unsplash.com/random/?movie,#{list.name}" %>)">
         <%= link_to list.name, list_path(list) %>
         <%= link_to '✖', list_path(list), method: :delete, class: 'delete-btn' %>
       </div>
