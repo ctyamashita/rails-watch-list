@@ -7,7 +7,7 @@
   <div class="cards">
     <% @list.movies.each_with_index do |movie, index| %>
       <div class="card-movie" style="background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%), url(<%= movie.poster_url %>)">
-        <%= link_to '✖', bookmark_path(@list.bookmark_ids[index]), method: :delete, class: 'delete-btn' %>
+        <%= link_to '✖', bookmark_path(@list.bookmark_ids[index]), method: :delete, data: {confirm: "Are you sure you want to delete #{movie.title}"}, class: 'delete-btn' %>
         <div class="rating">
           <h3 style="border-radius: 20px 0 0 20px; background-color: <%= movie.color %>">★ <%= movie.rating %></h3>
         </div>

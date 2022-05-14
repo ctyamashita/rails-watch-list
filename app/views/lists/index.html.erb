@@ -10,7 +10,7 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/random/?movie,#{list.name}" %>)">
         <%= link_to '', list_path(list), class: 'list-card-link' %>
         <span><%= list.name %></span>
-        <%= link_to '✖', list_path(list), method: :delete, class: 'delete-btn' %>
+        <%= link_to '✖', list_path(list), method: :delete, data: {confirm: "Are you sure you want to delete #{list.name}"}, class: 'delete-btn' %>
       </div>
     <% end %>
   </div>
