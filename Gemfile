@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "autoprefixer-rails", "10.2.5"
 gem 'cloudinary', '~> 1.16.0'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem 'rails-controller-testing', group: [ :test ]
 gem 'rspec-rails', group: [ :test ]

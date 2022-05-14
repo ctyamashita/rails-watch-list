@@ -4,18 +4,19 @@
   <%# <%= link_to "📃 Add list", new_list_path, class: 'btn btn-dark mb-3 ms-4' %>
 <div class="mx-3 row justify-content-center">
 
-  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 card bg-light">
-      <h3 class='my-4 text-center'><strong>Add your list 📝</strong></h3>
-      <%= render 'form' %>
-  </div>
 
-  <div class="cards col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 col-xxl-9">
+  <div class="cards col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9 col-xxl-9 mb-3">
     <% @lists.each do |list| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : "https://source.unsplash.com/random/?movie,#{list.name}" %>)">
-        <%= link_to list.name, list_path(list) %>
+        <%= link_to '', list_path(list), class: 'list-card-link' %>
+        <span><%= list.name %></span>
         <%= link_to '✖', list_path(list), method: :delete, class: 'delete-btn' %>
       </div>
     <% end %>
   </div>
 
+  <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3 card bg-light sticky-top" style="height: 376px">
+    <h3 class='my-4 text-center'><strong>Add your list 📝</strong></h3>
+    <%= render 'form' %>
+  </div>
 </div>
