@@ -12,8 +12,8 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@bookmark.list)
     else
+      @movies = Movie.where.not(id: @list.movies).order(title: :asc)
       render :new
-      # render list_path(@list)
     end
   end
 
