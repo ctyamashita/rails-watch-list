@@ -1,6 +1,6 @@
 # 📚 Movie Watch List
 
-Project description goes here
+Simple movie list organizer.
 
 <img src="https://github.com/ctyamashita/rails-watch-list/blob/master/app/assets/images/watch-list-screenshot.png" />
 <br>
