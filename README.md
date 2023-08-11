@@ -1,24 +1,58 @@
-# README
+# 📚 Movie Watch List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple movie list organizer.
 
-Things you may want to cover:
+<img src="https://github.com/ctyamashita/rails-watch-list/blob/master/app/assets/images/watch-list-screenshot.png" />
+<br>
+App home: https://watch-list-cty.herokuapp.com/
+   
 
-* Ruby version
+## Getting Started
+### Setup
 
-* System dependencies
+Install gems
+```
+bundle install
+```
+Install JS packages
+```
+yarn install
+```
 
-* Configuration
+### ENV Variables
+Create `.env` file
+```
+touch .env
+```
+Inside `.env`, set these variables. For any APIs, see group Slack channel.
+```
+CLOUDINARY_URL=your_own_cloudinary_url_key
+```
 
-* Database creation
+### DB Setup
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Database initialization
+### Run a server
+```
+rails s
+```
 
-* How to run the test suite
+## Built With
+- [Rails 6](https://guides.rubyonrails.org/) - Backend / Front-end
+- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
+- [Heroku](https://heroku.com/) - Deployment
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Bootstrap](https://getbootstrap.com/) — Styling
 
-* Services (job queues, cache servers, search engines, etc.)
+## Team Members
+- [Celso Takeshi Yamashita](https://www.linkedin.com/in/ctyamashita/)
 
-* Deployment instructions
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* ...
+## License
+This project is licensed under the MIT License
