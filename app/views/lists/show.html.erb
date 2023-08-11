@@ -1,7 +1,6 @@
 <div class="d-flex justify-content-center my-5">
   <h1><strong>[<%= @list.name %>]</strong></h1>
 </div>
-
 <div class="mx-3 row justify-content-center">
   <%= link_to "Add movie to this list 💬", new_list_bookmark_path(@list), class: 'btn btn-info mb-3' %>
   <div class="cards">
@@ -11,8 +10,8 @@
         <div class="rating">
           <h3 style="border-radius: 20px 0 0 20px; background-color: <%= movie.color %>">★ <%= movie.rating %></h3>
         </div>
-          <% comment = movie.bookmarks.where(list: @list).first.comment %>
-          <p class="comment">"<%= comment.size < 30 ? comment : comment.slice(0..30) + '...' %>"</p>
+        <% comment = movie.bookmarks.where(list: @list).first.comment %>
+        <p class="comment">"<%= comment.size < 30 ? comment : comment.slice(0..30) + '...' %>"</p>
         <div class="movie-description">
           <h2><%= movie.title %></h2>
           <p><%= movie.overview.slice(0..140) %>...</p>
